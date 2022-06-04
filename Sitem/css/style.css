@@ -1,0 +1,291 @@
+:root {
+    /*Imporatant & Common Variables*/
+    --Common_Margin: 20px;
+    --Common_Alpha: .05;
+
+    --Common_Border_Radius: 20px;
+    --Secondary_Common_Border_Radius: 20px;
+    
+    /*Imporatant Colors*/
+    --Main_Color: rgb(255, 187, 0);
+    --Secondary_Main_Color: rgb(255, 38, 0);
+    --Teritiary_Main_Color: rgb(255, 220, 220);
+    --Main_Text_Color: black;
+    
+    /*Changing Defaults*/
+    font-family: sans-serif;
+}
+
+/*General Stuff*/
+* {box-sizing: border-box;}
+html {padding: 0px 20px;}
+
+/*Navigation*/
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.1);
+    background-image:linear-gradient(to right, var(--Secondary_Main_Color), var(--Main_Color));
+}
+nav > ul {
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+nav form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.Site_Name {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: white;
+}
+.Empty {flex: .03;}
+.Nav_Button {
+    margin: 10px;
+    padding: 15px 20px;
+    border-radius: 100px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(255, 255, 255, .15);
+}
+#Logout_Button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    font-size: .85rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(255, 255, 255, .15);
+}
+
+textarea {
+    padding: 10px;
+    width: 60%;
+    border-radius: var(--Secondary_Common_Border_Radius);
+    font-size: 1rem;
+}
+
+body {
+    margin: 0px auto;
+    max-width: 1800px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+body input {
+    padding: 7px 10px;
+    margin-bottom: 7px;
+    border-radius: var(--Secondary_Common_Border_Radius);
+    border: none;
+    text-align: center;
+}
+
+section .Common_Form {
+    padding: 20px;
+    margin: var(--Common_Margin) 0px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: var(--Common_Border_Radius);
+    background-color: var(--Teritiary_Main_Color);
+}
+section form h1, section form h2 {
+    margin: 5px 5px 20px 5px;
+    color: rgba(0, 0, 0, .5);
+}
+section input[type = "submit"] {
+    margin-top: 5px;
+    padding: 7px 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: white;
+}
+section input[name = "Title"] {
+    padding: 10px;
+    width: 60%;
+    font-size: 1rem;
+}
+input[type = file] {
+    min-width: 60%;
+    align-self: center;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: .8rem;
+}
+input[type = file]::file-selector-button {
+    margin-right: 20px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: var(--Secondary_Common_Border_Radius);
+    font-weight: bold;
+    background-color: white;
+}
+section input:focus {outline: 2.5px solid rgba(0, 0, 0, 0.14);}
+section textarea:focus {outline: 2.5px solid rgba(0, 0, 0, 0.14);}
+
+/* Scroll Bar */
+::-webkit-scrollbar {width: 9px;}
+::-webkit-scrollbar-track {background: white;   }
+::-webkit-scrollbar-thumb {background: rgba(0, 0, 0, .2);}
+
+.info_box {
+    margin-bottom: 2px;
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, .8);
+}
+.info_box.success {background-image:linear-gradient(180deg, rgb(0, 255, 0), rgb(73, 188, 255));}
+.info_box.fail {background-image:linear-gradient(180deg, rgb(255, 208, 0), rgb(255, 0, 0));}
+.info_box.unknown {background-image:linear-gradient(180deg, rgb(255, 0, 128), rgb(153, 0, 255));}
+.info_box.alert {
+    margin: 10px 0px;
+    padding: 20px 50px;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 0;
+    color: white;
+    background-image:linear-gradient(60deg, var(--Secondary_Main_Color), var(--Main_Color));
+}
+
+.Profile {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, .15);
+}
+.Profile img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+}
+.Profile div {
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+}
+.Profile div > :first-child {
+    margin: var(--Common_Margin);
+    padding: 0px 10px;
+    border-radius: 100px;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    color: white;
+}
+
+#Home_NLI_Header {
+    margin-bottom: var(--Common_Margin);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    max-height: 300px;
+    width: auto;
+    position: relative;
+}
+#Home_NLI_Header img {
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: 50% 30%;
+    border-radius: 0 0 var(--Common_Border_Radius) var(--Common_Border_Radius);
+}
+#Home_NLI_Header > img ~ div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    border-radius: 0 0 var(--Common_Border_Radius) var(--Common_Border_Radius);
+    background-image: linear-gradient(to top, rgba(255, 255, 255, .8), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+}
+#Home_NLI_Header > img ~ h2 {
+    margin: 0px;
+    bottom: 7%;
+    position: absolute;
+    z-index: 2;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2.7rem;
+    color: rgba(112, 0, 124, .55);
+}
+
+.PrePost {
+    align-self: top;
+    text-align: left; 
+    word-wrap: break-word;
+    border: none;
+    max-width: 60%; 
+    height: 250px;
+}
+.Post {
+    padding: 10px 20px 20px 20px;   
+    border-radius: var(--Common_Border_Radius);
+    background-color: var(--Teritiary_Main_Color);
+}
+.Post h2 {
+    margin: 10px 8px 0 8px;
+    padding: 5px;
+    text-align: center;
+    word-break: keep-all;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: rgb(231, 140, 4);
+}
+.Post p{
+    margin: 0px 8px 10px 8px;
+    letter-spacing: 1px;
+    word-wrap: break-word;
+    text-align: justify;
+    font-size: 1.2rem;
+    color: rgb(160, 77, 0);
+}
+.Image_Holder {
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: space-evenly;
+    align-items: center;
+}
+.Image_Holder > div {
+    flex: 31%;
+    margin: 8px;
+    height: 250px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, var(--Common_Alpha));
+}
+.Image_Holder img {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 760px) {
+    :root {--Common_Border_Radius: 0px;}
+    html {
+        padding: 0px;
+    }
+    nav {
+        position: unset;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+}
